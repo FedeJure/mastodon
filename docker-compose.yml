@@ -75,6 +75,14 @@ services:
     volumes:
       - ./public/system:/mastodon/public/system
 
+    x-develop:
+      watch:
+      - action: sync
+        path: ./app/javascript
+        target: /mastodon/app/javascript
+      - action: rebuild
+        path: ./app/javascript
+
   streaming:
     # build: .
     image: ghcr.io/mastodon/mastodon:v4.2.0

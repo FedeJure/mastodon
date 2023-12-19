@@ -61,7 +61,6 @@ export default class Column extends PureComponent {
 
   render () {
     const { label, children } = this.props;
-    console.log("asasd")
 
     return (
       <div role='region' aria-label={label} className='column' ref={this.setRef}>
